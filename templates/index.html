@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Consar Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css')}}">
+    <style>
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+    <h1 style="text-align: center;">CONSAR ANALYTICS</h1>
+    <img src="https://github.com/Brilla1234/My-Datasets/blob/main/eolospane.jpeg?raw=true" alt="Girl in a jacket" style="width:1000px;height:300px;">
+
+    <p style="text-align: center; font-size: 20px;">Consar analytics is the world's leading data analytics and engineering consultancy with over 25
+        years of experience in different regions of the world
+    </p>
+    <br>
+    <form action="greet" method="post">
+    {% for messages in get_flashed_messages()%}
+        <p>{{messages}}</p>
+    {% endfor%}
+    <input type="text" name="name_input">
+    <br>
+    <br>
+    <input type="submit" value="GREET" id="GREET">
+    </form>
+</body>
+</html>
